@@ -23,3 +23,4 @@ USAGE.md
 docs/models/operations/calculaterequest.md
 docs/models/operations/calculateresponse.md
 docs/models/shared/operationtype.md
+.gitattributes
