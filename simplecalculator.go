@@ -23,7 +23,7 @@ func newSimpleCalculator(sdkConfig sdkConfiguration) *simpleCalculator {
 	}
 }
 
-// Calculate - Calculate
+// Calculate
 // Calculates the expression using the specified operation.
 func (s *simpleCalculator) Calculate(ctx context.Context, request operations.CalculateRequest) (*operations.CalculateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
