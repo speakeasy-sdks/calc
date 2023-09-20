@@ -13,7 +13,7 @@ import(
 )
 
 func main() {
-    s := calculator.New()
+    s := calc.New()
 
     ctx := context.Background()
     res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
