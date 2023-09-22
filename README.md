@@ -10,8 +10,6 @@ go get github.com/speakeasy-sdks/calc
 
 ## SDK Example Usage
 <!-- Start SDK Example Usage -->
-
-
 ```go
 package main
 
@@ -28,9 +26,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
-        Operation: shared.OperationTypeMultiply,
-        X: 5928.45,
-        Y: 7151.9,
+        Operation: shared.OperationTypeDivide,
+        X: 6027.63,
+        Y: 8579.46,
     })
     if err != nil {
         log.Fatal(err)
@@ -51,6 +49,38 @@ func main() {
 
 * [Calculate](docs/sdks/simplecalculator/README.md#calculate) - Calculate
 <!-- End SDK Available Operations -->
+
+
+
+<!-- Start Dev Containers -->
+
+
+
+<!-- End Dev Containers -->
+
+
+
+<!-- Start Pagination -->
+# Pagination
+
+Some of the endpoints in this SDK support pagination. To use pagination, you make your SDK calls as usual, but the
+returned response object will have a `Next` method that can be called to pull down the next group of results. If the
+return value of `Next` is `nil`, then there are no more pages to be fetched.
+
+Here's an example of one such pagination call:
+
+
+<!-- End Pagination -->
+
+
+
+<!-- Start Go Types -->
+
+<!-- End Go Types -->
+
+<!-- Placeholder for Future Speakeasy SDK Sections -->
+
+
 
 ### Maturity
 

@@ -2,8 +2,8 @@ configVersion: 1.0.0
 management:
   docChecksum: 0411242429f73de7fff0ffe36881e327
   docVersion: "1.0"
-  speakeasyVersion: 1.88.0
-  generationVersion: 2.118.1
+  speakeasyVersion: 1.89.0
+  generationVersion: 2.125.1
 generation:
   comments:
     disableComments: false
@@ -14,10 +14,10 @@ generation:
   tagNamespacingDisabled: false
 features:
   go:
-    core: 2.88.3
+    core: 2.88.4
     globalServerURLs: 2.82.0
 go:
-  version: 0.3.1
+  version: 0.3.2
   clientServerStatusCodesAsErrors: true
   maxMethodParams: 0
   packageName: github.com/speakeasy-sdks/calc

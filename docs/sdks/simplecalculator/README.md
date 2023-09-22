@@ -26,9 +26,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
-        Operation: shared.OperationTypeDivide,
-        X: 6027.63,
-        Y: 8579.46,
+        Operation: shared.OperationTypeMultiply,
+        X: 8472.52,
+        Y: 4236.55,
     })
     if err != nil {
         log.Fatal(err)
