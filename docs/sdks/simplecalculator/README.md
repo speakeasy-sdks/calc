@@ -1,4 +1,5 @@
 # SimpleCalculator
+(*SimpleCalculator*)
 
 ### Available Operations
 
@@ -26,9 +27,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
-        Operation: shared.OperationTypeMultiply,
-        X: 8472.52,
-        Y: 4236.55,
+        Operation: shared.OperationTypeSubtract,
+        X: 3946.69,
+        Y: 6431.33,
     })
     if err != nil {
         log.Fatal(err)
