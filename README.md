@@ -26,9 +26,9 @@ func main() {
 
     ctx := context.Background()
     res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
-        Operation: shared.OperationTypeDivide,
-        X: 6027.63,
-        Y: 8579.46,
+        Operation: shared.OperationTypeSubtract,
+        X: 3946.69,
+        Y: 6431.33,
     })
     if err != nil {
         log.Fatal(err)
@@ -54,8 +54,6 @@ func main() {
 
 <!-- Start Dev Containers -->
 
-
-
 <!-- End Dev Containers -->
 
 
@@ -68,8 +66,6 @@ returned response object will have a `Next` method that can be called to pull do
 return value of `Next` is `nil`, then there are no more pages to be fetched.
 
 Here's an example of one such pagination call:
-
-
 <!-- End Pagination -->
 
 
