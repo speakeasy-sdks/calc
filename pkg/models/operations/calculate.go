@@ -39,9 +39,12 @@ func (o *CalculateRequest) GetY() float64 {
 
 type CalculateResponse struct {
 	Calculate200TextPlainNumber *string
-	ContentType                 string
-	StatusCode                  int
-	RawResponse                 *http.Response
+	// HTTP response content type for this operation
+	ContentType string
+	// HTTP response status code for this operation
+	StatusCode int
+	// Raw HTTP response; suitable for custom response parsing
+	RawResponse *http.Response
 }
 
 func (o *CalculateResponse) GetCalculate200TextPlainNumber() *string {
