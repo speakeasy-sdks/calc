@@ -2,6 +2,7 @@ simplecalculator.go
 calculator.go
 go.mod
 go.sum
+tests/helpers.go
 pkg/models/sdkerrors/sdkerror.go
 pkg/types/bigint.go
 pkg/types/date.go
@@ -18,9 +19,8 @@ pkg/utils/requestbody.go
 pkg/utils/retries.go
 pkg/utils/security.go
 pkg/utils/utils.go
-tests/helpers.go
-pkg/models/operations/calculate.go
-pkg/models/shared/operationtype.go
+/pkg/models/operations/calculate.go
+/pkg/models/shared/operationtype.go
 USAGE.md
 docs/models/operations/calculaterequest.md
 docs/models/operations/calculateresponse.md

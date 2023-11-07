@@ -13,19 +13,19 @@ import (
 	"net/http"
 )
 
-type simpleCalculator struct {
+type SimpleCalculator struct {
 	sdkConfiguration sdkConfiguration
 }
 
-func newSimpleCalculator(sdkConfig sdkConfiguration) *simpleCalculator {
-	return &simpleCalculator{
+func newSimpleCalculator(sdkConfig sdkConfiguration) *SimpleCalculator {
+	return &SimpleCalculator{
 		sdkConfiguration: sdkConfig,
 	}
 }
 
 // Calculate
 // Calculates the expression using the specified operation.
-func (s *simpleCalculator) Calculate(ctx context.Context, request operations.CalculateRequest) (*operations.CalculateResponse, error) {
+func (s *SimpleCalculator) Calculate(ctx context.Context, request operations.CalculateRequest) (*operations.CalculateResponse, error) {
 	baseURL := utils.ReplaceParameters(s.sdkConfiguration.GetServerDetails())
 	url, err := utils.GenerateURL(ctx, baseURL, "/{operation}", request, nil)
 	if err != nil {
@@ -72,7 +72,7 @@ func (s *simpleCalculator) Calculate(ctx context.Context, request operations.Cal
 		switch {
 		case utils.MatchContentType(contentType, `text/plain`):
 			out := string(rawBody)
-			res.Calculate200TextPlainNumber = &out
+			res.Res = &out
 		default:
 			return nil, sdkerrors.NewSDKError(fmt.Sprintf("unknown content-type received: %s", contentType), httpRes.StatusCode, string(rawBody), httpRes)
 		}

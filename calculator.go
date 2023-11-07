@@ -62,7 +62,7 @@ func (c *sdkConfiguration) GetServerDetails() (string, map[string]string) {
 
 // Calculator - APIMATIC Calculator: Simple calculator API hosted on APIMATIC
 type Calculator struct {
-	SimpleCalculator *simpleCalculator
+	SimpleCalculator *SimpleCalculator
 
 	sdkConfiguration sdkConfiguration
 }
@@ -117,9 +117,9 @@ func New(opts ...SDKOption) *Calculator {
 		sdkConfiguration: sdkConfiguration{
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
-			SDKVersion:        "0.5.0",
-			GenVersion:        "2.172.0",
-			UserAgent:         "speakeasy-sdk/go 0.5.0 2.172.0 1.0 github.com/speakeasy-sdks/calc",
+			SDKVersion:        "0.6.0",
+			GenVersion:        "2.181.1",
+			UserAgent:         "speakeasy-sdk/go 0.6.0 2.181.1 1.0 github.com/speakeasy-sdks/calc",
 		},
 	}
 	for _, opt := range opts {

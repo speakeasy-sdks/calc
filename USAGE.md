@@ -25,7 +25,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.Calculate200TextPlainNumber != nil {
+	if res.Res != nil {
 		// handle response
 	}
 }

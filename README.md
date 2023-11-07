@@ -34,7 +34,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if res.Calculate200TextPlainNumber != nil {
+	if res.Res != nil {
 		// handle response
 	}
 }
@@ -46,7 +46,7 @@ func main() {
 ## Available Resources and Operations
 
 
-### [SimpleCalculator](docs/sdks/simplecalculator/README.md)
+### [.SimpleCalculator](docs/sdks/simplecalculator/README.md)
 
 * [Calculate](docs/sdks/simplecalculator/README.md#calculate) - Calculate
 <!-- End SDK Available Operations -->
@@ -81,8 +81,6 @@ Here's an example of one such pagination call:
 # Error Handling
 
 Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
-
-
 <!-- End Error Handling -->
 
 
@@ -115,6 +113,93 @@ var (
 
 This can be a convenient way to configure timeouts, cookies, proxies, custom headers, and other low-level configuration.
 <!-- End Custom HTTP Client -->
+
+
+
+<!-- Start Server Selection -->
+# Server Selection
+
+## Select Server by Index
+
+You can override the default server globally using the `WithServerIndex` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
+
+| # | Server | Variables |
+| - | ------ | --------- |
+| 0 | `https://examples.apimatic.io/apps/calculator` | None |
+
+For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/calc"
+	"github.com/speakeasy-sdks/calc/pkg/models/operations"
+	"github.com/speakeasy-sdks/calc/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := calc.New(
+		calc.WithServerIndex(0),
+	)
+
+	ctx := context.Background()
+	res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
+		Operation: shared.OperationTypeSubtract,
+		X:         3946.69,
+		Y:         6431.33,
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Res != nil {
+		// handle response
+	}
+}
+
+```
+
+
+## Override Server URL Per-Client
+
+The default server can also be overridden globally using the `WithServerURL` option when initializing the SDK client instance. For example:
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/calc"
+	"github.com/speakeasy-sdks/calc/pkg/models/operations"
+	"github.com/speakeasy-sdks/calc/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := calc.New(
+		calc.WithServerURL("https://examples.apimatic.io/apps/calculator"),
+	)
+
+	ctx := context.Background()
+	res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
+		Operation: shared.OperationTypeSubtract,
+		X:         3946.69,
+		Y:         6431.33,
+	})
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if res.Res != nil {
+		// handle response
+	}
+}
+
+```
+<!-- End Server Selection -->
 
 <!-- Placeholder for Future Speakeasy SDK Sections -->
 
