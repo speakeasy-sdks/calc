@@ -46,7 +46,7 @@ func main() {
 ## Available Resources and Operations
 
 
-### [.SimpleCalculator](docs/sdks/simplecalculator/README.md)
+### [SimpleCalculator](docs/sdks/simplecalculator/README.md)
 
 * [Calculate](docs/sdks/simplecalculator/README.md#calculate) - Calculate
 <!-- End SDK Available Operations -->
@@ -80,7 +80,46 @@ Here's an example of one such pagination call:
 <!-- Start Error Handling -->
 # Error Handling
 
-Handling errors in your SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+Handling errors in this SDK should largely match your expectations.  All operations return a response object or an error, they will never return both.  When specified by the OpenAPI spec document, the SDK will return the appropriate subclass.
+
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.SDKError | 400-600            | */*                |
+
+
+## Example
+
+```go
+package main
+
+import (
+	"context"
+	"github.com/speakeasy-sdks/calc"
+	"github.com/speakeasy-sdks/calc/pkg/models/operations"
+	"github.com/speakeasy-sdks/calc/pkg/models/shared"
+	"log"
+)
+
+func main() {
+	s := calc.New()
+
+	ctx := context.Background()
+	res, err := s.SimpleCalculator.Calculate(ctx, operations.CalculateRequest{
+		Operation: shared.OperationTypeSubtract,
+		X:         3946.69,
+		Y:         6431.33,
+	})
+	if err != nil {
+
+		var e *sdkerrors.SDKError
+		if errors.As(err, &e) {
+			// handle error
+			log.Fatal(e.Error())
+		}
+	}
+}
+
+```
 <!-- End Error Handling -->
 
 

@@ -22,9 +22,9 @@ pkg/utils/utils.go
 /pkg/models/operations/calculate.go
 /pkg/models/shared/operationtype.go
 USAGE.md
-docs/models/operations/calculaterequest.md
-docs/models/operations/calculateresponse.md
-docs/models/shared/operationtype.md
+docs/pkg/models/operations/calculaterequest.md
+docs/pkg/models/operations/calculateresponse.md
+docs/pkg/models/shared/operationtype.md
 docs/sdks/calculator/README.md
 docs/sdks/simplecalculator/README.md
 .gitattributes
