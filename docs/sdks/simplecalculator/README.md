@@ -15,11 +15,11 @@ Calculates the expression using the specified operation.
 package main
 
 import(
-	"context"
-	"log"
 	"github.com/speakeasy-sdks/calc"
-	"github.com/speakeasy-sdks/calc/pkg/models/operations"
+	"context"
 	"github.com/speakeasy-sdks/calc/pkg/models/shared"
+	"github.com/speakeasy-sdks/calc/pkg/models/operations"
+	"log"
 )
 
 func main() {
