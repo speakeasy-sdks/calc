@@ -1,0 +1,48 @@
+lockVersion: 2.0.0
+id: 3e4f71e6-c766-4895-8d00-49e506a81900
+management:
+  docChecksum: 0411242429f73de7fff0ffe36881e327
+  docVersion: "1.0"
+  speakeasyVersion: internal
+  generationVersion: 2.225.2
+  releaseVersion: 0.7.1
+  configChecksum: af43934478f91d152b79958383e4702a
+  repoURL: https://github.com/speakeasy-sdks/calc.git
+  repoSubDirectory: .
+  installationURL: https://github.com/speakeasy-sdks/calc
+  published: true
+features:
+  go:
+    core: 3.3.0
+    globalServerURLs: 2.82.1
+generatedFiles:
+  - simplecalculator.go
+  - calculator.go
+  - go.mod
+  - go.sum
+  - tests/helpers.go
+  - pkg/models/sdkerrors/sdkerror.go
+  - pkg/types/bigint.go
+  - pkg/types/date.go
+  - pkg/types/datetime.go
+  - pkg/types/decimal.go
+  - pkg/types/pointers.go
+  - pkg/utils/contenttype.go
+  - pkg/utils/form.go
+  - pkg/utils/headers.go
+  - pkg/utils/json.go
+  - pkg/utils/pathparams.go
+  - pkg/utils/queryparams.go
+  - pkg/utils/requestbody.go
+  - pkg/utils/retries.go
+  - pkg/utils/security.go
+  - pkg/utils/utils.go
+  - /pkg/models/operations/calculate.go
+  - /pkg/models/shared/operationtype.go
+  - docs/pkg/models/operations/calculaterequest.md
+  - docs/pkg/models/operations/calculateresponse.md
+  - docs/pkg/models/shared/operationtype.md
+  - docs/sdks/calculator/README.md
+  - docs/sdks/simplecalculator/README.md
+  - USAGE.md
+  - .gitattributes
