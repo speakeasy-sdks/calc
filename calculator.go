@@ -118,8 +118,8 @@ func New(opts ...SDKOption) *Calculator {
 			Language:          "go",
 			OpenAPIDocVersion: "1.0",
 			SDKVersion:        "0.7.2",
-			GenVersion:        "2.234.3",
-			UserAgent:         "speakeasy-sdk/go 0.7.2 2.234.3 1.0 github.com/speakeasy-sdks/calc",
+			GenVersion:        "2.237.2",
+			UserAgent:         "speakeasy-sdk/go 0.7.2 2.237.2 1.0 github.com/speakeasy-sdks/calc",
 		},
 	}
 	for _, opt := range opts {

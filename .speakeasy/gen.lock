@@ -4,7 +4,7 @@ management:
   docChecksum: 0411242429f73de7fff0ffe36881e327
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.234.3
+  generationVersion: 2.237.2
   releaseVersion: 0.7.2
   configChecksum: 661070d36b89dd66e862435e79c35bd9
   repoURL: https://github.com/speakeasy-sdks/calc.git
@@ -20,7 +20,6 @@ generatedFiles:
   - calculator.go
   - go.mod
   - go.sum
-  - tests/helpers.go
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
