@@ -4,22 +4,21 @@ management:
   docChecksum: 0411242429f73de7fff0ffe36881e327
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.258.2
-  releaseVersion: 0.9.0
-  configChecksum: 87ea0daa6992dec7d56932901aea20d5
+  generationVersion: 2.263.3
+  releaseVersion: 0.9.1
+  configChecksum: 3e5228bf5f54e5f346bf8a79b6523f81
   repoURL: https://github.com/speakeasy-sdks/calc.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/calc
   published: true
 features:
   go:
-    core: 3.4.0
+    core: 3.4.1
     globalServerURLs: 2.82.1
 generatedFiles:
   - simplecalculator.go
   - calculator.go
   - go.mod
-  - go.sum
   - pkg/models/sdkerrors/sdkerror.go
   - pkg/types/bigint.go
   - pkg/types/date.go
