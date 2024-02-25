@@ -4,16 +4,16 @@ management:
   docChecksum: 0411242429f73de7fff0ffe36881e327
   docVersion: "1.0"
   speakeasyVersion: internal
-  generationVersion: 2.263.3
-  releaseVersion: 0.9.1
-  configChecksum: 3e5228bf5f54e5f346bf8a79b6523f81
+  generationVersion: 2.272.4
+  releaseVersion: 0.9.2
+  configChecksum: 197d9cb77505ab20db2458f2903eaacb
   repoURL: https://github.com/speakeasy-sdks/calc.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/calc
   published: true
 features:
   go:
-    core: 3.4.1
+    core: 3.4.3
     globalServerURLs: 2.82.1
 generatedFiles:
   - simplecalculator.go
