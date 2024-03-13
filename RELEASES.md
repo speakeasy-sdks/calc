@@ -229,3 +229,13 @@ Based on:
 - [go v0.10.0] .
 ### Releases
 - [Go v0.10.0] https://github.com/speakeasy-sdks/calc/releases/tag/v0.10.0 - .
+
+## 2024-03-13 01:04:05
+### Changes
+Based on:
+- OpenAPI Doc 1.0 
+- Speakeasy CLI 1.207.1 (2.280.6) https://github.com/speakeasy-api/speakeasy
+### Generated
+- [go v0.10.1] .
+### Releases
+- [Go v0.10.1] https://github.com/speakeasy-sdks/calc/releases/tag/v0.10.1 - .
