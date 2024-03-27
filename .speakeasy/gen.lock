@@ -3,17 +3,17 @@ id: 3e4f71e6-c766-4895-8d00-49e506a81900
 management:
   docChecksum: 0411242429f73de7fff0ffe36881e327
   docVersion: "1.0"
-  speakeasyVersion: 1.207.1
-  generationVersion: 2.280.6
-  releaseVersion: 0.10.1
-  configChecksum: 47d79db8baf1b2c5fc6115b762c73ee8
+  speakeasyVersion: 1.227.0
+  generationVersion: 2.291.0
+  releaseVersion: 0.10.2
+  configChecksum: 9a32eecc6e4b62b7cc1caa83724dc182
   repoURL: https://github.com/speakeasy-sdks/calc.git
   repoSubDirectory: .
   installationURL: https://github.com/speakeasy-sdks/calc
   published: true
 features:
   go:
-    core: 3.4.4
+    core: 3.4.5
     globalServerURLs: 2.82.2
     responseFormat: 0.1.0
 generatedFiles:
